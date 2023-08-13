@@ -1,5 +1,6 @@
 {
   "name": "vscode-neut",
+  "displayName": "Neut Language",
   "description": "A VSCode extension to support the Neut programming language and its LSP",
   "author": "Dmytro S",
   "license": "ISC",
@@ -14,31 +15,33 @@
     "vscode",
     "extension"
   ],
+  "categories": [
+    "Programming Languages"
+  ],
   "engines": {
     "vscode": "^1.70.0"
   },
   "activationEvents": [
-    "onLanguage:neut"
+    "onLanguage:neut",
+    "workspaceContains:module.ens"
   ],
   "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "Neut-vscode",
-      "properties": {
-        "languageServerExample.maxNumberOfProblems": {
-          "scope": "resource",
-          "type": "number",
-          "default": 100,
-          "description": "max number of LSP problems"
-        }
+    "languages": [
+      {
+        "id": "neut",
+        "extensions": [
+          "nt",
+          "neut"
+        ]
       }
-    }
+    ],
+    "commands": []
   },
-  "main": "./client/out/extention",
+  "main": "./client/out/extension",
   "scripts": {
+    "vscode:prepublish": "npm run compile",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
-    "postinstall": "cd client && npm install && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bugs": {
