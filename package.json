@@ -3,6 +3,7 @@
   "displayName": "Neut Language",
   "description": "A VSCode extension to support the Neut programming language and its LSP",
   "author": "Dmytro S",
+  "publisher": "dmytrish",
   "license": "ISC",
   "version": "0.0.1",
   "repository": {
