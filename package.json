@@ -20,7 +20,7 @@
     "Programming Languages"
   ],
   "engines": {
-    "vscode": "^1.70.0"
+    "vscode": "^1.75.0"
   },
   "activationEvents": [
     "onLanguage:neut",
@@ -38,19 +38,24 @@
     ],
     "commands": []
   },
-  "main": "./client/out/extension",
+  "main": "./out/extension",
   "scripts": {
-    "vscode:prepublish": "npm run compile && npm prune --production",
-    "compile": "tsc -b",
+    "vscode:prepublish": "npm run build && npm run clean",
+    "build": "tsc -b",
     "watch": "tsc -b -w",
+    "clean": "npm prune --production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/EarlGray/vscode-neut/issues"
   },
   "homepage": "https://github.com/EarlGray/vscode-neut#readme",
+  "dependencies": {
+    "vscode-languageclient": "^8.1.0"
+  },
   "devDependencies": {
     "@types/node": "^20.4.10",
+    "@types/vscode": "^1.75.0",
     "typescript": "^5.1.6"
   }
 }

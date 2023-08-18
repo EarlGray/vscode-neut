@@ -21,7 +21,7 @@ export function activate(context: ExtensionContext) {
     };
 
     client = new LanguageClient(
-        'vscodeNeut',
+        'Neut',
         serverOptions,
         clientOptions,
     );
