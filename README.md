@@ -4,4 +4,4 @@ This is a vscode extension to support the [Neut programming language](https://ve
 
 Functionality:
 
-- on opening a folder containing `module.ens` or a `.nt` file, it activates `neut lsp`.
+- it activates `neut lsp` on opening a folder containing `module.ens` or a `.nt` file

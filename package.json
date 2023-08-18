@@ -40,7 +40,7 @@
   },
   "main": "./client/out/extension",
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run compile && npm prune --production",
     "compile": "tsc -b",
     "watch": "tsc -b -w",
     "test": "echo \"Error: no test specified\" && exit 1"
