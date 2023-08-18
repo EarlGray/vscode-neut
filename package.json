@@ -36,6 +36,13 @@
         ]
       }
     ],
+    "grammars": [
+      {
+        "language": "neut",
+        "scopeName": "source.neut",
+        "path": "./syntaxes/neut.tmLanguage.json"
+      }
+    ],
     "commands": []
   },
   "main": "./out/extension",

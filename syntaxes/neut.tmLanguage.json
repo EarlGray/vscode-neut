@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "neut",
+  "scopeName": "source.neut",
+  "fileTypes": [
+    ".nt",
+    ".neut"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#builtin"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(alias-opaque|alias|declare|define|def|inline|lucent|data|macro|resource|struct)\\b",
+          "name": "keyword.decl.neut"
+        },
+        {
+          "match": "\\b(let?|let&|let-mu|let|in|on|mu|fix)\\b",
+          "name": "keyword.bind.neut"
+        },
+        {
+          "match": "\\b(else|else-if|if|then)\\b",
+          "name": "keyword.control.neut"
+        },
+        {
+          "match": "\\b(fn|lambda)\\b",
+          "name": "keyword.val.neut"
+        },
+        {
+          "match": "\\b(case|match|introspect|do)\\b",
+          "name": "keyword.match.neut"
+        },
+        {
+          "match": "\\b(import|export|external|default|link|this|base)\\b",
+          "name": "keyword.module.neut"
+        },
+        {
+          "match": "\\b(attach|detach|borrow|mutate)\\b",
+          "name": "keyword.data.neut"
+        },
+        {
+          "match": "\\b(begin|by|of|via|when|with|call)\\b",
+          "name": "keyword.other.neut"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*$",
+          "name": "comment.line.double-dash.neut"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.neut",
+          "begin": "\"",
+          "end": "\""
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.decimal.neut",
+          "match": "\\b[0-9][0-9_]*\\b"
+        }
+      ]
+    },
+    "builtin": {
+      "patterns": [
+        {
+          "name": "constant.language.neut",
+          "match": "\\b(tau|flow)\\b",
+          "begin": "[^-_]",
+          "end": "[^-_]"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.neut",
+          "match": "(=>|=|&)"
+        },
+        {
+          "name": "keyword.operator.type.neut",
+          "match": ":"
+        }
+      ]
+
+    }
+  }
+}
